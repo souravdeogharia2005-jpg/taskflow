@@ -1,0 +1,166 @@
+:root {
+  /* Fonts */
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Sky Blue & Ice Accent Palette */
+  --primary: #0284C7;                    /* Vibrant Sky Blue (Sky 600) */
+  --primary-container: #0EA5E9;          /* Bright Sky Blue (Sky 500) */
+  --primary-hover: #0369A1;
+  --primary-glow: rgba(14, 165, 233, 0.32);
+  --primary-surface: #F0F9FF;            /* Airy ice/sky tint */
+  --primary-fixed: #E0F2FE;
+  --primary-fixed-dim: #BAE6FD;
+  --on-primary: #ffffff;
+  --on-primary-container: #ffffff;
+
+  /* White, Black & Slate Grey Neutrals */
+  --surface: #F8FAFC;                    /* Clean soft slate-white background */
+  --surface-container-lowest: #ffffff;   /* Pure crisp white cards */
+  --surface-container-low: #F1F5F9;      /* Light slate grey */
+  --surface-container: #E2E8F0;          /* Smooth subtle grey borders */
+  --surface-container-high: #CBD5E1;     /* Medium grey */
+  --surface-container-highest: #94A3B8;
+  --on-surface: #0F172A;                 /* Deep charcoal / obsidian black text */
+  --on-surface-variant: #475569;         /* Sophisticated dark slate grey */
+  --secondary: #64748B;                  /* Balanced modern grey */
+  --secondary-container: #F1F5F9;
+
+  /* Accents */
+  --success: #10B981;                    /* Emerald Green / Done */
+  --success-surface: #ECFDF5;
+  --warning: #F59E0B;                    /* Warm Amber */
+  --warning-surface: #FFFBEB;
+  --error: #EF4444;                      /* Vibrant Red for high priority / error */
+  --error-container: #FEE2E2;
+  --on-error-container: #991B1B;
+  
+  --inverse-surface: #0F172A;            /* Pitch black / dark slate for hero cards */
+  --inverse-on-surface: #F8FAFC;
+  --outline: #94A3B8;
+  --outline-variant: #E2E8F0;
+
+  /* Category colors */
+  --cat-work: #0284C7;
+  --cat-study: #6366F1;
+  --cat-personal: #0D9488;
+  --cat-shopping: #F59E0B;
+  --cat-health: #10B981;
+  --cat-other: #64748B;
+
+  /* Typography Scale */
+  --text-display-lg: 34px;
+  --text-display-lg-mobile: 28px;
+  --text-headline-lg: 24px;
+  --text-headline-md: 20px;
+  --text-headline-sm: 17px;
+  --text-body-lg: 16px;
+  --text-body-md: 15px;
+  --text-body-sm: 13px;
+  --text-label-lg: 14px;
+  --text-label-md: 12px;
+  --text-label-sm: 11px;
+
+  /* Border Radii */
+  --radius-default: 16px;
+  --radius-large: 20px;
+  --radius-hero: 24px;
+  --radius-pill: 9999px;
+  --radius-stat: 20px;
+
+  /* Shadows with modern soft sky & slate diffusion */
+  --shadow-card-sm: 0 2px 10px rgba(15, 23, 42, 0.04);
+  --shadow-card-md: 0 6px 20px rgba(15, 23, 42, 0.06);
+  --shadow-card-lg: 0 14px 34px rgba(15, 23, 42, 0.1);
+  --shadow-fab: 0 10px 24px rgba(14, 165, 233, 0.38);
+  --shadow-header: 0 2px 12px rgba(15, 23, 42, 0.03);
+}
+
+[data-theme='retro'] {
+  /* Retro Classic Theme Tokens - Early Facebook & Google 2000s/2010s Aesthetic */
+  --primary: #3B5998;                    /* Classic Facebook Royal Blue */
+  --primary-container: #4267B2;          /* Classic FB Interactive Blue */
+  --primary-hover: #29447E;              /* Deep Navy FB Border/Hover */
+  --primary-glow: rgba(59, 89, 152, 0.35);
+  --primary-surface: #ECEFF5;            /* Iconic FB Background Tint */
+  --primary-fixed: #D8DFEA;              /* Classic FB Table & Card Border */
+  --primary-fixed-dim: #BDC7D8;
+  --on-primary: #ffffff;
+  --on-primary-container: #ffffff;
+
+  /* Neutrals */
+  --surface: #ECEFF5;                    /* Authentic Facebook Light Blue-Grey Canvas */
+  --surface-container-lowest: #ffffff;   /* Crisp Pure White Cards */
+  --surface-container-low: #F7F7F7;      /* Classic Google Off-White */
+  --surface-container: #D8DFEA;          /* Signature FB 1px Border */
+  --surface-container-high: #CCD4E0;     /* FB Divider Grey */
+  --surface-container-highest: #8B9DC3;   /* Muted Slate Grey */
+  --on-surface: #1C2A47;                 /* Deep Navy/Charcoal Web 2.0 Text */
+  --on-surface-variant: #566580;         /* Classic Web Link / Meta Text */
+  --secondary: #6B7A99;                  /* Retro Secondary Grey */
+  --secondary-container: #ECEFF5;
+
+  /* Accents - Classic Google & FB Palette */
+  --success: #34A853;                    /* Google Classic Green */
+  --success-surface: #E6F4EA;
+  --warning: #FBBC05;                    /* Google Classic Yellow */
+  --warning-surface: #FEF7E0;
+  --error: #EA4335;                      /* Google Classic Red */
+  --error-container: #FCE8E6;
+  --on-error-container: #C5221F;
+  
+  --inverse-surface: #2E4473;            /* Classic Deep FB Slate */
+  --inverse-on-surface: #FFFFFF;
+  --outline: #8B9DC3;
+  --outline-variant: #D8DFEA;
+
+  /* Category colors */
+  --cat-work: #3B5998;                   /* FB Blue */
+  --cat-study: #EA4335;                  /* Google Red */
+  --cat-personal: #34A853;               /* Google Green */
+  --cat-shopping: #FBBC05;               /* Google Yellow */
+  --cat-health: #42B72A;                 /* FB Green */
+  --cat-other: #6B7A99;
+
+  /* Border Radii - Classic Early Web (Slightly rounded, not oversized pill) */
+  --radius-default: 8px;
+  --radius-large: 10px;
+  --radius-hero: 12px;
+  --radius-pill: 6px;
+  --radius-stat: 10px;
+
+  /* Shadows - Classic Subtle Crisp Shadows */
+  --shadow-card-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-card-md: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-card-lg: 0 4px 14px rgba(43, 68, 115, 0.15);
+  --shadow-fab: 0 4px 12px rgba(59, 89, 152, 0.4);
+  --shadow-header: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='dark'] {
+  /* Dark Theme Tokens - Deep Black & Slate with Glowing Sky Blue */
+  --surface: #0B0F17;                    /* Deep Obsidian Black */
+  --surface-container-lowest: #111827;   /* Sleek Dark Cards */
+  --surface-container-low: #182234;
+  --surface-container: #1E293B;
+  --surface-container-high: #334155;
+  --surface-container-highest: #475569;
+  --on-surface: #F8FAFC;                 /* Pure Crisp White text */
+  --on-surface-variant: #94A3B8;         /* Silver grey text */
+  --primary: #38BDF8;                    /* Bright Luminous Sky Blue (Sky 400) */
+  --primary-container: #0EA5E9;          /* Sky 500 */
+  --primary-surface: rgba(14, 165, 233, 0.16);
+  --primary-fixed: rgba(14, 165, 233, 0.25);
+  --primary-fixed-dim: #7DD3FC;
+  --inverse-surface: #F8FAFC;
+  --inverse-on-surface: #0F172A;
+  --secondary: #94A3B8;
+  --secondary-container: #1E293B;
+  --outline: #64748B;
+  --outline-variant: #334155;
+  
+  --shadow-card-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-card-md: 0 8px 25px rgba(0, 0, 0, 0.5);
+  --shadow-card-lg: 0 16px 36px rgba(0, 0, 0, 0.65);
+  --shadow-fab: 0 10px 24px rgba(56, 189, 248, 0.4);
+  --shadow-header: 0 2px 12px rgba(0, 0, 0, 0.4);
+}

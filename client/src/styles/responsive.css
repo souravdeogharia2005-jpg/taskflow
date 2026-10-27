@@ -1,0 +1,51 @@
+/* responsive.css */
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .icon-sidebar {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .header {
+    padding: 0 16px;
+  }
+  .page-wrapper {
+    padding: 16px;
+    padding-bottom: 90px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sidebar {
+    display: none;
+  }
+  .icon-sidebar {
+    display: flex;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .page-wrapper {
+    padding: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    display: flex;
+  }
+  .icon-sidebar {
+    display: none;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .page-wrapper {
+    padding: 32px;
+    padding-bottom: 32px;
+  }
+}
