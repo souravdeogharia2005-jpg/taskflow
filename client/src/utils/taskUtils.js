@@ -90,12 +90,37 @@ export const filterTasks = (tasks, { status, priority, category, due, search }) 
   return result;
 };
 
+export const getTodayDateString = () => {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
+export const isTaskForToday = (task) => {
+  const todayStr = getTodayDateString();
+  if (task.dueDate) {
+    return task.dueDate === todayStr;
+  }
+  if (task.createdAt) {
+    const createdStr = task.createdAt.slice(0, 10);
+    if (createdStr === todayStr) return true;
+  }
+  return !task.completed;
+};
+
 export const getStats = (tasks) => {
   const total = tasks.length;
   const completed = tasks.filter(t => t.completed).length;
   const pending = total - completed;
   const overdue = tasks.filter(t => isOverdue(t)).length;
-  const todayTasks = tasks.filter(t => t.dueDate && isToday(parseISO(t.dueDate)));
+  
+  let todayTasks = tasks.filter(t => isTaskForToday(t));
+  if (todayTasks.length === 0 && total > 0) {
+    todayTasks = tasks;
+  }
+  
   const todayCompleted = todayTasks.filter(t => t.completed).length;
   return { total, completed, pending, overdue, todayTasks, todayCompleted };
 };

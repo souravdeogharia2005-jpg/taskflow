@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTaskContext } from '../../context/TaskContext.jsx';
 import { validateTask } from '../../utils/validation.js';
 import { generateId } from '../../utils/id.js';
+import { getTodayDateString } from '../../utils/taskUtils.js';
 
 const TaskForm = ({ initialData, onSubmit, onCancel }) => {
   const { categories } = useTaskContext();
@@ -10,7 +11,7 @@ const TaskForm = ({ initialData, onSubmit, onCancel }) => {
     description: initialData?.description || '',
     category: initialData?.category || categories[0]?.name || 'Work',
     priority: initialData?.priority || 'medium',
-    dueDate: initialData?.dueDate || '',
+    dueDate: initialData?.dueDate || getTodayDateString(),
     dueTime: initialData?.dueTime || '',
     subtasks: initialData?.subtasks || [],
   });
@@ -23,7 +24,7 @@ const TaskForm = ({ initialData, onSubmit, onCancel }) => {
       description: initialData?.description || '',
       category: initialData?.category || categories[0]?.name || 'Work',
       priority: initialData?.priority || 'medium',
-      dueDate: initialData?.dueDate || '',
+      dueDate: initialData?.dueDate || getTodayDateString(),
       dueTime: initialData?.dueTime || '',
       subtasks: initialData?.subtasks || [],
     });

@@ -18,8 +18,13 @@ const Dashboard = () => {
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', width: '100%' }}>
-      <WelcomeHeader tasksCount={stats.todayTasks.length - stats.todayCompleted} />
-      <ProgressCard completed={stats.todayCompleted} total={stats.todayTasks.length} />
+      <WelcomeHeader tasksCount={stats.todayTasks.length > 0 ? (stats.todayTasks.length - stats.todayCompleted) : stats.pending} />
+      <ProgressCard 
+        completed={stats.todayCompleted} 
+        total={stats.todayTasks.length} 
+        allCompleted={stats.completed} 
+        allTotal={stats.total} 
+      />
       <StatsCards total={stats.total} completed={stats.completed} pending={stats.pending} />
 
       {stats.overdue > 0 && (
